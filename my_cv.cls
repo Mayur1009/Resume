@@ -8,11 +8,12 @@
 \RequirePackage[default]{raleway}
 \RequirePackage{relsize}
 \RequirePackage{ifthen}
-\RequirePackage[a4paper, left=1.75cm, right=1.75cm, top=1.2cm, bottom=0.8cm]{geometry}
+\RequirePackage[a4paper, left=1.75cm, right=1.75cm, top=1.5cm, bottom=1.5cm]{geometry}
 \RequirePackage{multicol}
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{listofitems}
 \RequirePackage{enumitem}
+\RequirePackage{academicons}
 
 %% Page Settings
 \setlength\columnsep{1cm}
@@ -87,7 +88,7 @@
 %	\vspace{-10pt}
 }
 
-\newcommand*{\school}[5]
+\newcommand*{\school}[7]
 {%
     \subsection{#1} %
 %    \vspace{-10pt} %
@@ -98,34 +99,33 @@
     	\textbf{Specialization:} #3\\
     } %
     \textbf{Institute:} #4\\ %
-    \textbf{Thesis:} #5%
+    \textbf{Department:} #5\\
+    \textbf{CGPA:} #6\\
+    \textbf{Thesis:} #7%
 %    \vspace{-10pt}
 }
 
 \newcommand{\iconhref}[3][black]{\href{#2}{\color{#1}{#3}}}
-
 \newcommand*{\titletext}[9]
 {%
     \begin{multicols}{2}
-    {\ralewayextra\bfseries\fontsize{40}{40}\selectfont \hspace{-25pt} #1}\vspace{-12pt}\\
-    {\ralewaythin\fontsize{55}{55}\selectfont #2}
-
-    {\raleway\small  \hspace{70pt}#3}
-    \columnbreak
-
-    \begin{flushright}
-%    \vspace*{-0.1cm}
-    {\ralewayextra \href{}{\faEnvelope}} \textbf{#4}\\
-    {\ralewayextra \href{}{\faPhone}} \textbf{#5}\\
-    {\ralewayextra \iconhref{orcid.org}{\faOrcid}} \textbf{#6}\\
-    {\ralewayextra \iconhref{https://www.linkedin.com/}{\faLinkedin}} \textbf{#7}\\
-    {\ralewayextra \iconhref{github.com}{\faGithub}} \textbf{#8}\\
-    \ifthenelse{\equal{#9}{}}{}{{\ralewayextra \iconhref{gitlab.com}{\faGitlab}} \textbf{#9}}%
-
-
-    \end{flushright}
+	    {\ralewayextra\bfseries\fontsize{50}{50}\selectfont \hspace{-25pt} #1}\vspace{-12pt}\\
+	    {\ralewaythin\fontsize{55}{55}\selectfont #2}
+	
+	    {\raleway\small  \hspace{70pt}#3}
+	    \columnbreak
+	
+	    \begin{flushright}
+		%    \vspace*{-0.1cm}
+		    {\ralewayextra \href{}{\faEnvelope}} \textbf{#4}\\
+		    {\ralewayextra \href{}{\faPhone}} \textbf{#5}\\
+		    {\ralewayextra \iconhref{orcid.org}{\faOrcid}} \textbf{#6}\\
+		    {\ralewayextra \iconhref{https://www.linkedin.com/}{\faLinkedin}} \textbf{#7}\\
+		    {\ralewayextra \iconhref{github.com}{\faGithub}} \textbf{#8}\\
+		    {\ralewayextra \iconhref{gitlab.com}{\faGitlab}} \textbf{#9}%
+	    \end{flushright}
     \end{multicols}
-    \vspace{-1cm}
+%	\hrule
+    \vspace{-10pt}
 }
-
 \renewcommand{\baselinestretch}{1.2}
